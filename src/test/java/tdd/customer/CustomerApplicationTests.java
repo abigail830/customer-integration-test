@@ -1,16 +1,12 @@
 package tdd.customer;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.junit.Test;
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest
-class CustomerApplicationTests {
+
+public class CustomerApplicationTests extends IntegrationTestBase{
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }

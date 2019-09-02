@@ -1,14 +1,13 @@
 package tdd.customer.domain.model;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
-
-class CustomerTest {
+public class CustomerTest {
 
     @Test
-    void toString应将客户信息转换成字符串() {
+    public void toString应将客户信息转换成字符串() {
         Customer customer = new Customer();
         customer.setId(100L);
         customer.setFirstName("Bruce");
