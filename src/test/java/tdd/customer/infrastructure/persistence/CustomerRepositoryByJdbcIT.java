@@ -31,7 +31,7 @@ public class CustomerRepositoryByJdbcIT extends IntegrationTestBase {
     }
 
     @Test
-    public void should_get_1_in_list_when_findByLastName() {
+    public void should_able_to_found_the_exist_customer_by_last_name() {
 
         //when
         final List<Customer> customerList = customerRepository.findByLastName("Last");
@@ -41,12 +41,13 @@ public class CustomerRepositoryByJdbcIT extends IntegrationTestBase {
     }
 
     @Test
-    public void should_get_0_in_list_when_findByLastName() {
+    public void should_get_0_when_find_the_not_exist_customer() {
 
         //when
         final List<Customer> customerList = customerRepository.findByLastName("Wrong");
         //then
         assertEquals(0, customerList.size());
     }
+
 
 }

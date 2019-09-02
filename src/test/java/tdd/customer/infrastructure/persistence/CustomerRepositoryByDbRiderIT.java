@@ -22,9 +22,7 @@ public class CustomerRepositoryByDbRiderIT extends IntegrationTestBase {
     @DataSet(value = "/db_rider/find_by_last_name.yml",
             strategy = SeedStrategy.CLEAN_INSERT,
             cleanAfter = true)
-    public void findByLastName() {
-        //given
-        System.out.println("In CustomerRepositoryByDbRiderIT");
+    public void should_able_to_found_the_exist_customer_by_last_name() {
         //when
         final List<Customer> customerList = customerRepository.findByLastName("Last");
 
