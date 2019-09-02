@@ -10,6 +10,8 @@ import java.util.Optional;
 
 @Service
 public class CustomerService {
+    public static final String FIRST = "F";
+    public static final String LAST = "2";
     @Autowired
     CustomerRepository repository;
 
@@ -28,5 +30,14 @@ public class CustomerService {
 
     public void deleteAll() {
         repository.deleteAll();
+    }
+
+    public List<Customer> findCustomerByName(String name, String searchType) {
+        if (searchType.equals(LAST))
+            return repository.findByLastName(name);
+        else if (searchType.equals(FIRST))
+            return repository.findByFirstName(name);
+        else
+            throw new RuntimeException("Invalid searchType");
     }
 }
