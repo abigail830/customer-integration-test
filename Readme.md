@@ -1,49 +1,39 @@
+# 客户管理程序
+
+## 问题
+
+* 给定一个基于 Spring Boot 的客户管理程序(Customer)，包含生成客户和查询所有客户的功能
+* 任务
+	* 增加集成测试
+	    * 对Mapper->DB进行集成测试
+	    * 对Service->Mapper->DB进行集成测试
+	    * 对Controller->Service->Mapper->DB进行集成测试
+	
+* 思考：
+    * 使用什么DB进行测试？
+    * 怎样准备测试数据？
+        * 使用Repository准备
+        * 使用SQL准备
+        * 使用DBUnit/DB-Rider准备
+    * 怎样触发请求到Controller?
+
+* 要求： 
+    * 集成测试和单元测试可分别运行
+    
+		
+		
+## 作业 
+
+* 在集成测试驱动下完成客户修改和查询所有客户的功能
+
+
+## 学习目的：
+* 掌握集成测试的概念和原理
+* 掌握集成测试的方法
+
+-------------------------------
+
 ## Tips 提示
-
-### 创建程序
-
-* 使用 Spring Boot Starter 创建项目
-    * https://start.spring.io 
-    * Starter：Web、JPA、JDBC、H2）
-* 在pom.xml中增加设置
-    * Junit4 或 Junit5 (exclude Junit4 from spring boot test first)
-    * assertJ（Optional)
-    * swagger2/swagger-ui
-* 编辑 application.properties(见程序)
-* Enable Swagger UI
-	     
-		```
-		@EnableSwagger2
-		@SpringBootApplication
-		public class CustomerApplication {
-			public static void main(String[] args) {
-				SpringApplication.run(CustomerApplication.class, args);
-			}	
-		}
-		```
-* 编写程序
-* 运行
-    * 方法1:
-	  ```
-        mvn spring-boot:run
-      ```
-   
-    * 方法2：
-        ```
-        mvn clean package
-        java -jar target/gs-rest-service-0.1.0.jar
-        ```
-
-    * 方法3： run CustomerApplication in IDE
-    * h2 console: http://localhost:8080/h2 
-    * JDBC URL : jdbc:h2:./h2-dev
-    * api doc: http://localhost:8080/swagger-ui.html
-
-### 使用什么DB？
-* 如使用H2 
-```
-spring.datasource.url: jdbc:h2:mem:IntegrationTest;DB_CLOSE_DELAY=-1;MODE=MYSQL
-```
 
 ### 集成测试与单元测试分离
 
@@ -88,6 +78,3 @@ spring.datasource.url: jdbc:h2:mem:IntegrationTest;DB_CLOSE_DELAY=-1;MODE=MYSQL
                 </executions>
             </plugin>
 ```
-		
-	
-
