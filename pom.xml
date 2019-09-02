@@ -73,6 +73,13 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.database-rider</groupId>
+            <artifactId>rider-spring</artifactId>
+            <version>1.5.2</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- junit-jupiter already includes junit-jupiter-api/engine/params -->
         <!--<dependency>-->
             <!--<groupId>org.junit.jupiter</groupId>-->
