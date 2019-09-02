@@ -1,0 +1,7 @@
+customer:
+- id: 1
+  first_name: "Kevin"
+  last_name: "Last1"
+- id: 2
+  first_name: "first2"
+  last_name: "Kevin"

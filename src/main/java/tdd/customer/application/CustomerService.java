@@ -12,6 +12,7 @@ import java.util.Optional;
 public class CustomerService {
     public static final String FIRST = "F";
     public static final String LAST = "2";
+
     @Autowired
     CustomerRepository repository;
 
